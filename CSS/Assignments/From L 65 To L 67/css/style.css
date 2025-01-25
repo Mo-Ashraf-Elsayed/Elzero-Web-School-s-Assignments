@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.one {
+  width: 300px;
+  height: 200px;
+  margin: 100px auto;
+  color: steelblue;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.one::before {
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  background-color: steelblue;
+  transform: rotate(5deg);
+  position: absolute;
+  z-index: -1;
+}
+.one::after {
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  background-color: palevioletred;
+  transform: rotate(-5deg);
+  position: absolute;
+  z-index: -1;
+}
+/* Task 2  */
+
+.two {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+}
+.two::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid palevioletred;
+  border-left-color: transparent;
+  position: absolute;
+
+  z-index: -1;
+  background-color: white;
+}
+.two::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 20px solid steelblue;
+  position: absolute;
+
+  z-index: -1;
+  border-right-color: transparent;
+}
+/* Task 3  */
+
+.three {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+}
+.three::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid palevioletred;
+  border-left-color: transparent;
+  position: absolute;
+
+  transform: rotate(0);
+  z-index: -1;
+  background-color: white;
+  transition: all 0.5s;
+}
+.three:hover::after {
+  transform: rotate(360deg);
+}
+.three::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 20px solid steelblue;
+  position: absolute;
+
+  transform: rotate(0);
+  z-index: -1;
+  border-right-color: transparent;
+  transition: all 0.5s;
+}
+.three:hover::before {
+  transform: rotate(-360deg);
+}
+/* Task 4  */
+
+.four {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+}
+.four::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid palevioletred;
+  border-left-color: transparent;
+  position: absolute;
+
+  transform: rotate(0);
+  z-index: -1;
+  background-color: white;
+  transition: all 0.5s;
+}
+.four:hover::after {
+  transform: rotate(360deg);
+}
+.four::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 20px solid steelblue;
+  position: absolute;
+
+  transform: rotate(0);
+  z-index: -1;
+  border-right-color: transparent;
+  transition: all 0.5s linear 0.5s;
+}
+.four:hover::before {
+  transform: rotate(360deg);
+}

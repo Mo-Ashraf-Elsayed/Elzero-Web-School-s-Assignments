@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      /* This Code Change color of h1 element with id='el' to red 
+      but this code doesn't work because this code couldn't reach to the element
+      because this in the head and the element in the body
+      */
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // This Code Change color of h1 element with id='el' to red but when or after the page load
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- <h1 id="el">Page Title</h1> -->
+    <script>
+      // This Code Change color of h1 element with id='el' to red
+      document.getElementById("el").style.color = "red";
+      
+    </script>
+
+
+  </body>   
+</html>

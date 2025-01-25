@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+div:nth-child(2) {
+  background-color: red;
+}
+div {
+  background-color: #eee;
+  text-align: center;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  margin: 10px auto;
+}
+div:nth-child(4) {
+  background-color: #cbcbcb;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 10px;
+  font-weight: bold;
+}
+div:nth-child(4)::first-letter {
+  background-color: red;
+  padding: 15px 10px;
+  margin-left: -25px;
+}
+.one {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-left: solid 5px red;
+}
+.one::before {
+  content: attr(data-person);
+  text-align: center;
+  width: 70px;
+  background-color: #cbcbcb;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: -120px;
+  top: 50%;
+  margin-top: -20px;
+}
+.one::after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent red transparent transparent;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  margin-top: -15px;
+}
+.two {
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  border-right: solid 5px red;
+  counter-increment: counter;
+  position: relative;
+  padding-left: 70px;
+}
+.two::before {
+  content: counter(counter);
+  width: 50px;
+  text-align: center;
+  height: inherit;
+  background-color: red;
+
+  position: absolute;
+  left: 0;
+}

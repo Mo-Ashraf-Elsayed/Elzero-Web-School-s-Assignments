@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.task1 {
+  width: 100px;
+  height: 100px;
+}
+
+.green {
+  background-color: rgb(105, 255, 105);
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 3;
+}
+.red {
+  background-color: rgb(255, 71, 71);
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 4;
+}
+.blue {
+  background-color: rgb(85, 85, 255);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.black {
+  background-color: black;
+  height: 20px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 2;
+}
+.task2 {
+  width: 400px;
+  margin: 300px auto 100px;
+  position: relative;
+  background-color: #eee;
+  padding: 40px;
+  border-bottom: 3px solid rgb(255, 71, 71);
+  border-top: 3px solid rgb(255, 71, 71);
+  border-right: 3px solid skyblue;
+  border-left: 3px solid skyblue;
+}
+.task2 span {
+  background-color: skyblue;
+  color: white;
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  /* padding: 6px 6px; */
+}
+.top-left {
+  top: -15px;
+  left: -19px;
+  border-right: 3px solid rgb(255, 71, 71);
+}
+.bottom-left {
+  bottom: -15px;
+  left: -19px;
+  border-right: 3px solid rgb(255, 71, 71);
+}
+.top-right {
+  top: -15px;
+  right: -19px;
+
+  border-left: 3px solid rgb(255, 71, 71);
+}
+.bottom-right {
+  bottom: -15px;
+  right: -19px;
+  border-left: 3px solid rgb(255, 71, 71);
+}
+.parent {
+  list-style-position: inside;
+  width: 400px;
+  list-style-type: none;
+}
+.parent .html,
+.parent .css,
+.parent .js {
+  margin: 15px;
+  background-color: #eee;
+  padding: 7px;
+}
+.parent li ol {
+  padding-left: 25px;
+  list-style-position: outside;
+}
+.parent li ul {
+  padding-left: 0px;
+  list-style-position: outside;
+}
+.parent li ol li,
+.parent li ul li {
+  background-color: white;
+  padding: 10px;
+  margin: 5px;
+}
+.parent li ul li {
+  list-style-position: inside;
+}
+table {
+  width: 700px;
+  margin: auto;
+
+  border-bottom: 5px solid green;
+}
+table caption {
+  padding: 20px;
+  font-weight: bold;
+}
+table thead tr th {
+  color: white;
+  background-color: rgb(77, 77, 77);
+  padding: 15px;
+}
+table tbody tr td {
+  border-spacing: 0px;
+  background-color: #eee;
+  text-align: center;
+  padding: 15px;
+}
+table tbody tr td img {
+  width: 30%;
+}
+table tbody tr .btns {
+  white-space: nowrap;
+}
+table tbody tr .btns button {
+  width: fit-content;
+  border: none;
+  color: white;
+  padding: 7px;
+  font-weight: bold;
+}
+table tbody tr .btns .view {
+  background-color: skyblue;
+}
+table tbody tr .btns .delete {
+  background-color: palevioletred;
+}

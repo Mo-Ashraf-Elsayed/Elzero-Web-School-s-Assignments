@@ -1,0 +1,223 @@
+.one1 {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  color: orange;
+  border-radius: 50%;
+  box-shadow: 5px 0px orange, -5px 0px skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent {
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.parent div {
+  color: white;
+  background-color: red;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 30%;
+}
+.parent2 {
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-content: space-between; */
+}
+.parent2 div {
+  color: white;
+  background-color: gray;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 30%;
+}
+.parent2 .one {
+  order: 6;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent2 .two {
+  order: 5;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent2 .three {
+  order: 2;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent2 .four {
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent2 .five {
+  order: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent2 .six {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent3 {
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.parent3 div {
+  color: white;
+  background-color: seagreen;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.parent3 .one {
+  align-self: flex-end;
+  flex-basis: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent3 .two {
+  align-self: stretch;
+  flex-basis: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.parent3 .three {
+  align-self: flex-end;
+  flex-basis: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent4 {
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.parent4 div {
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 15%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent4 .one {
+  background-color: orange;
+  order: 2;
+  align-self: flex-start;
+}
+.parent4 .two {
+  background-color: yellowgreen;
+  order: 3;
+  align-self: flex-end;
+}
+.parent4 .three {
+  background-color: brown;
+  order: 4;
+  align-self: flex-start;
+}
+.parent4 .four {
+  background-color: rebeccapurple;
+  order: 1;
+  align-self: flex-end;
+}
+.page {
+  background-color: #eee;
+  padding: 10px;
+}
+.page .header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.page .header .logo,
+.page .header .links {
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.page .header .logo {
+  width: calc(98% - 90%);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.page .header .links {
+  list-style: none;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.page .header .links li {
+  margin: 0 5px;
+}
+.page .main-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page .main-area .content,
+.page .main-area .sidebar {
+  background-color: #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 500px;
+}
+.page .main-area .content {
+  width: calc(98% - 25%);
+}
+.page .main-area .sidebar {
+  width: 25%;
+}
+.page .footer {
+  display: flex;
+  background-color: #ccc;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 10px;
+}
