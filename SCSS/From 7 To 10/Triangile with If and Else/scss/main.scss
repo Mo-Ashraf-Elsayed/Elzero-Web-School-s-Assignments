@@ -1,0 +1,39 @@
+$direction: "right";
+.box {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  line-height: 400px;
+  border: 2px solid #09c;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #09c;
+  position: relative;
+  &::before {
+    content: "";
+    border: solid 25px transparent;
+    position: absolute;
+
+    @if $direction == "top" {
+      left: calc(50% - 25px);
+      top: -50px;
+      border-bottom-color: #09c;
+    } @else if $direction == "right" {
+      top: calc(50% - 25px);
+      right: -50px;
+      border-left-color: #09c;
+    } @else if $direction == "left" {
+      top: calc(50% - 25px);
+      left: -50px;
+      border-right-color: #09c;
+    } @else if $direction == "bottom" {
+      left: calc(50% - 25px);
+      bottom: -50px;
+      border-top-color: #09c;
+    } @else {
+      @error "#{$direction} is not a direction";
+    }
+  }
+}

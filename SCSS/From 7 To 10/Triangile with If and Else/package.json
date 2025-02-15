@@ -1,0 +1,13 @@
+{
+  "name": "triangile-with-if-and-else",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass scss/main.scss style/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

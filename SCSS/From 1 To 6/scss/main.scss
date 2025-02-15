@@ -1,0 +1,183 @@
+//-----------------Task 9------------------//
+// this task is on the top because @use must be written on the top of file
+
+@use "./Project_Folder/Helpers/functions";
+@use "./Project_Folder/Helpers/vars";
+@use "./Project_Folder/Layout/footer";
+@use "./Project_Folder/Layout/nav";
+
+//-----------------Task 1------------------//
+.content {
+  > {
+    .box {
+      padding: 15px;
+      > {
+        .title {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .cat {
+    padding: 15px;
+  }
+  &.premium {
+    &::before {
+      content: "Premium Box";
+    }
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+//-----------------Task 2------------------//
+// This task have three ways
+
+// => Way one
+.class {
+  > .child {
+    padding: 10px;
+  }
+}
+
+// => Way two
+.class > {
+  .child {
+    padding: 10px;
+  }
+}
+
+// => Way three
+.class {
+  > {
+    .child {
+      padding: 10px;
+    }
+  }
+}
+//-----------------Task 3------------------//
+
+.class {
+  font: {
+    weight: bold;
+    size: 20px;
+  }
+}
+//-----------------Task 4------------------//
+
+// The output needed of sass code in the task
+
+.parent + .sibling {
+  margin: auto;
+  margin-top: 10px;
+}
+.parent + .sibling ~ .last {
+  padding: 10px;
+}
+
+//-----------------Task 5------------------//
+
+.widget {
+  background-color: white;
+  padding: 20px;
+}
+.main-border {
+  border: 1px solid #ccc;
+}
+.my-class {
+  @extend .widget;
+  @extend .main-border;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+//-----------------Task 6------------------//
+
+%widget {
+  background-color: white;
+  padding: 20px;
+}
+%main-border {
+  border: 1px solid #ccc;
+}
+.my-class {
+  font-weight: bold;
+  margin: 20px auto;
+}
+.my-class {
+  @extend %widget;
+}
+.my-class {
+  @extend %main-border;
+}
+
+//-----------------Task 7------------------//
+
+$task-7-media: "max-width: 575px";
+%h2-p {
+  font-size: 20px;
+}
+
+.box {
+  h2 {
+    @extend %h2-p;
+  }
+  p {
+    @extend %h2-p;
+  }
+  @media ($task-7-media) {
+    h2,
+    p {
+      font-size: 16px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//-----------------Task 8------------------//
+
+// The Code
+// Do Not Edit Here
+$red: #e91e63;
+$green: #009688;
+
+// Add What You Want Here
+$link-color: $green;
+$link-hover: $red;
+
+// Do Not Edit Here
+.box a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+//-----------------Use Task 9------------------//
+
+h1 {
+  font-size: vars.$var1;
+}
+h2 {
+  font-size: functions.$var2;
+}
+h3 {
+  font-size: nav.$var3;
+}
+h4 {
+  font-size: footer.$var4;
+}
+
+//-----------------Task 10------------------//
+
+.box {
+  font-size: 20px;
+  &-holder {
+    width: 1000px;
+    &-content {
+      margin: auto;
+    }
+  }
+}

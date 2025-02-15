@@ -1,0 +1,23 @@
+.box {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  line-height: 400px;
+  border: 2px solid #09c;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #09c;
+  position: relative;
+}
+.box::before {
+  content: "";
+  border: solid 25px transparent;
+  position: absolute;
+  top: calc(50% - 25px);
+  right: -50px;
+  border-left-color: #09c;
+}
+
+/*# sourceMappingURL=style.css.map */
